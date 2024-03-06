@@ -6,12 +6,12 @@
    display: flex;
    flex-direction: column;
    justify-content: space-between;
-
+   
    @include tablet{
         height:100%;
         margin-left:10px;
         margin-right:10px;
-       width:100%;
+        width:100%;
        
     }
     @include mobile{
@@ -19,7 +19,8 @@
         margin-left:10px;
         margin-right:10px;
         width:inherit;
-       
+        
+        
     }
    .textContainer {
        flex:1;

@@ -23,10 +23,7 @@ const variants={
 
 const Services = () => {
     const ref=useRef()
-    const isInView = useInView(ref, {
-        threshold: 0.5, // Desktop threshold
-        thresholdMobile: 0.2, // Mobile threshold
-    })
+    const isInView=useInView(ref,{margin:"500px"})
   return (
     <motion.div 
     className='services' 

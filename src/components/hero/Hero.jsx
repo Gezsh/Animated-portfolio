@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+import Links from '../sidebar/links/Links'
 import './hero.scss'
 import {motion} from 'framer-motion'
 const textVariant = {
@@ -49,8 +51,10 @@ const Hero = () => {
             <motion.h2 variants={textVariant}> Gezhagn Teramedew</motion.h2>
             <motion.h1 variants={textVariant}>Web developer and UI designer</motion.h1>
             <motion.div className="buttons" variants={textVariant}>
-                <motion.button variants={textVariant}>See the Latest works</motion.button>
-                <motion.button variants={textVariant}>Contact Me</motion.button>
+            <motion.button variants={textVariant}>
+      <a href='https://realestatesgezsh.netlify.app'>See the Latest works</a>
+            </motion.button>
+                <motion.button variants={textVariant}><a href='#Contact'>Contact Me</a></motion.button>
             </motion.div>
             <motion.img variants={textVariant} animate="scrollButton" src="/scroll.png"/>
            </motion.div>
