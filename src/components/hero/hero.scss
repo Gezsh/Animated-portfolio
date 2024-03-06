@@ -6,11 +6,53 @@
     background: linear-gradient(180deg, #0c0c1d,#111132);
     position:relative;
 
+    @include  desktop{
+        display:flex;
+       padding:50px;
+    }
+    @include  tablet{
+       display:inherit;
+       padding:50px; 
+     
+    }
+    @include  mobile{
+        display:inherit;
+        padding:inherit;
+    }
+
+  
+  
     .wrapper{
-        max-width:1366px;
+        max-width:100%;
         height:100%;
         margin:auto;
+         @include desktop{
+            
+            margin-left:0;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            padding:5px;
+          }
+         @include tablet{
+            
+            height:50%;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            padding:5px;
+          }
+        @include mobile{
+            max-width:100%;
+            height:50%;
+            display:flex;
         
+            align-items: center;
+            justify-content: center;
+            
+          }
+       
+      
         .textContainer{
             height:100%;
             display:flex;
@@ -18,28 +60,66 @@
             justify-content: center;
             gap:40px;
             width:800px;
-            @include mobile{
+             @include tablet{
                width:100%;
                height:50%;
                gap:20px;
+            
                align-items: center;
                text-align: center;
              
             }
+            @include mobile{
+               width:100%;
+               height:50%;
+               align-items: center;
+               text-align: center;
+             
+            }
+           
+           
             h2{
                 font-size:30px;
                 color:rebeccapurple;
                 letter-spacing: 10px;
+                @include desktop{
+                    letter-spacing: 2;
+                    font-size:3rem;
+                 }
+                @include tablet{
+                    letter-spacing: 2;
+                    font-size:3rem;
+                 }
+                @include mobile{
+                    letter-spacing: 0;
+                    font-size:1rem;
+                 }
+               
+               
             }
 
             h1{
                 font-size:88px;
-                @include mobile{
-                    font-size:36px;
+                @include tablet{
+                    
+                    font-size:3rem;
                  }
+
+                @include mobile{
+                    
+                    font-size:1rem ;
+                 }
+                
             }
 
             .buttons{
+                @include mobile{
+                    display:flex;
+                   
+                   justify-content: center;
+                   
+                 }
+               
             button{
                 padding:20px;
                 border:1px solid white;
@@ -49,11 +129,36 @@
                 margin-right: 20px;
                 cursor:pointer;
                 font-weight: 300;
+                 @include tablet{
+                    flex-direction:column;
+                    font-size:2rem;
+                    padding:8px;
+                    margin-bottom: 5px;
+                    align-items: center;
+                 }
+                @include mobile{
+                    flex-direction:column;
+                    font-size:0.8rem;
+                    padding:8px;
+                    margin-bottom: 5px;
+                    align-items: center;
+                 }
+               
+              
             }
             }
 
             img{
                 width:50px;
+                @include tablet{
+                    height:50px;
+                    width:50px;
+                 }
+                @include mobile{
+                    height:40px;
+                    width:40px;
+                 }
+                
                 
             }
         }
@@ -65,18 +170,43 @@
         top:0;
         right:0;
         object-fit:contain;
+        @include tablet{
+           height:50%;
+           width:100%;
+           top:unset;
+           bottom:10px;
+           display:flex;
+           align-items: center;
+           justify-content: center;
+        }
         @include mobile{
            height:50%;
            width:100%;
            top:unset;
-           bottom:0;
+           bottom:10px;
+           display:flex;
+           align-items: center;
+           justify-content: center;
         }
+        
+       
 
         img{
             width:100%;
             height:calc(100% + 100px);
             object-fit: cover;
             z-index: 1000;
+             @include tablet{
+                z-index:5;
+                object-fit: contain;
+            }
+            @include mobile{
+                z-index:5;
+                object-fit: inherit;
+            }
+           
+            
+            
         }
     }
 
@@ -88,5 +218,13 @@
         color:#ffffff09;
         width:50%;
         font-weight: bold;
+         @include tablet{
+           width:50%;
+         }
+        @include mobile{
+           width:25%;
+         }
+       
+
     }
 }

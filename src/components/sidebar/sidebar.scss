@@ -29,12 +29,18 @@
            align-items: center;
            justify-content: center;
            gap:20px;
+           @include mobile{
+
+              z-index:  999;
+
+           }
 
            a{
             font-size: 30px;
 
             @include mobile{
                 font-size: 20px;  
+               
                }
            }
         }

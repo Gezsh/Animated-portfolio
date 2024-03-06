@@ -8,11 +8,25 @@
     align-items:center;
     gap:50px;
     
+    @include desktop{
+      
+            height:100%;
+            padding:60px;
+           
+    }
+    @include tablet{
+      
+            height:100%;
+            padding:60px;
+           
+    }
     @include mobile{
         width:100%;
         padding:10px;
         flex-direction: column;
+        gap:5px;
     }
+   
     
     .textContainer{
         flex:1;
@@ -20,24 +34,48 @@
         flex-direction:column;
         gap:40px;
 
+        @include tablet{
+           gap:20px;
+          
+         justify-content: start;
+           margin-top:70px ;
+           gap:5px;
+           margin:0;
+        }
         @include mobile{
            gap:20px;
            text-align: center;
            align-items: center;
            margin-top:70px ;
+           gap:5px;
+           margin:0;
         }
         
         h1{
             font-size:100px;
             line-height:88px;
             @include mobile{
-                font-size: 36px;
+                font-size: 16px;
             }
         }
 
-        span{
+        .item{
+             
+            h1{
+                @include mobile{
+                    font-size: 10px;
+                }
+            }
+
+             span{
             font-weight:300;
+            @include mobile{
+                font-size:15px;
+            }
         }
+        }
+
+       
     }
     .formContainer{
         
@@ -52,6 +90,11 @@
             position:absolute;
             margin:auto;
             z-index:-10;
+            @include mobile{
+            width:100px;
+            height:100px;
+            }
+           
         }
         form{
             
@@ -59,7 +102,7 @@
         flex-direction:column;
         gap:20px;
         
-        input,textarea{
+        input{
             padding:20px;
             background-color:transparent;
             border:1px solid white;
@@ -67,9 +110,22 @@
             border-radius:5px;
 
             @include mobile{
-                padding:10px;
+                padding:8px;
             }
         }
+        textarea{
+            padding:20px;
+            background-color:transparent;
+            border:1px solid white;
+            color:white;
+            border-radius:5px;
+
+            @include mobile{
+                padding:8px;
+                height:40px;
+            }
+        }
+
         button{
             padding:20px;
             border:none;

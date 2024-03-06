@@ -42,7 +42,7 @@ const Single=({item})=>{
                 <div className='imageContainer' ref={ref}>
                     <img src={item.img}/>
                 </div>
-             
+               
              <motion.div className="textContainer" style={{y:y}}>
                 <h2 >{item.title}</h2>
                 <p>{item.desc}</p>
